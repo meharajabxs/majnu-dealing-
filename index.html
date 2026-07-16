@@ -1,205 +1,455 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ur" dir="ltr">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Majnu Dealing - Premium Earbuds</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apex Surgical Instruments | Sialkot</title>
+    <!-- Google Fonts for professional typography -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS resets and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, sans-serif;
-}
+        :root {
+            --primary-color: #0d6efd;
+            --secondary-color: #0b5ed7;
+            --dark-color: #1e293b;
+            --light-bg: #f8fafc;
+            --border-color: #e2e8f0;
+        }
 
-body{
-    background:linear-gradient(135deg,#0f172a,#1e293b,#334155);
-    color:white;
-}
+        body {
+            background-color: var(--light-bg);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
 
-header{
-    text-align:center;
-    padding:60px 20px;
-}
+        /* Direct Edit Indicator Style */
+        [contenteditable="true"] {
+            border: 1px dashed transparent;
+            transition: all 0.3s ease;
+            outline: none;
+        }
 
-header h1{
-    font-size:50px;
-    color:#00e5ff;
-}
+        [contenteditable="true"]:hover {
+            border-color: var(--primary-color);
+            background-color: rgba(13, 110, 253, 0.05);
+            cursor: pointer;
+        }
 
-header p{
-    margin-top:15px;
-    font-size:18px;
-}
+        [contenteditable="true"]:focus {
+            border-color: var(--secondary-color);
+            background-color: rgba(13, 110, 253, 0.1);
+            box-shadow: 0 0 8px rgba(13, 110, 253, 0.2);
+        }
 
-.hero{
-    text-align:center;
-    padding:40px 20px;
-}
+        /* Navigation */
+        header {
+            background-color: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
-.hero img{
-    width:300px;
-    max-width:90%;
-    border-radius:20px;
-    box-shadow:0 0 25px rgba(0,229,255,0.5);
-}
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
 
-.btn{
-    display:inline-block;
-    margin-top:20px;
-    padding:12px 25px;
-    background:#00e5ff;
-    color:black;
-    text-decoration:none;
-    border-radius:30px;
-    font-weight:bold;
-}
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
 
-.gallery{
-    padding:60px 20px;
-    text-align:center;
-}
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
 
-.gallery h2{
-    margin-bottom:30px;
-    color:#00e5ff;
-}
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
 
-.gallery-container{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
+        .nav-links a:hover {
+            color: var(--primary-color);
+        }
 
-.gallery-container img{
-    width:100%;
-    border-radius:15px;
-    transition:0.4s;
-}
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(13, 110, 253, 0.05) 0%, rgba(13, 110, 253, 0.15) 100%);
+            padding: 100px 20px;
+            text-align: center;
+        }
 
-.gallery-container img:hover{
-    transform:scale(1.05);
-}
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
 
-.features{
-    padding:60px 20px;
-    text-align:center;
-}
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            color: var(--dark-color);
+        }
 
-.features h2{
-    color:#00e5ff;
-    margin-bottom:20px;
-}
+        .hero p {
+            font-size: 18px;
+            color: #64748b;
+            margin-bottom: 30px;
+        }
 
-.feature-box{
-    display:flex;
-    flex-wrap:wrap;
-    justify-content:center;
-    gap:20px;
-}
+        /* Help Notice */
+        .edit-notice {
+            background-color: #e0f2fe;
+            color: #0369a1;
+            padding: 12px;
+            border-radius: 8px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 14px;
+            font-weight: 600;
+        }
 
-.card{
-    background:#1e293b;
-    padding:20px;
-    width:250px;
-    border-radius:15px;
-}
+        /* Section Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 20px;
+        }
 
-.contact{
-    text-align:center;
-    padding:60px 20px;
-}
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 15px;
+            position: relative;
+        }
 
-.contact h2{
-    color:#00e5ff;
-    margin-bottom:20px;
-}
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
 
-.contact a{
-    color:white;
-    text-decoration:none;
-}
+        .section-subtitle {
+            text-align: center;
+            color: #64748b;
+            margin-bottom: 50px;
+        }
 
-footer{
-    text-align:center;
-    padding:20px;
-    background:#0f172a;
-}
-</style>
+        /* Grid Layout for Instruments */
+        .instruments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .instrument-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid var(--border-color);
+        }
+
+        .instrument-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+
+        .instrument-img-container {
+            width: 100%;
+            height: 250px;
+            background-color: #f1f5f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .instrument-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .instrument-info {
+            padding: 25px;
+        }
+
+        .instrument-info h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--dark-color);
+        }
+
+        .instrument-info p {
+            color: #64748b;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+
+        .instrument-cat {
+            display: inline-block;
+            background: #f1f5f9;
+            color: var(--primary-color);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        /* Features Section */
+        .features-section {
+            background-color: #ffffff;
+            padding: 80px 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .feature-box {
+            text-align: center;
+        }
+
+        .feature-icon {
+            font-size: 40px;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-box h3 {
+            margin-bottom: 10px;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background-color: #f8fafc;
+            padding: 80px 20px;
+        }
+
+        .contact-card-container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border-color);
+            text-align: center;
+        }
+
+        .contact-info-item {
+            margin: 20px 0;
+            font-size: 18px;
+        }
+
+        .contact-info-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        .contact-info-item a:hover {
+            color: var(--secondary-color);
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark-color);
+            color: #ffffff;
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        footer p {
+            opacity: 0.8;
+            font-size: 14px;
+        }
+    </style>
 </head>
-
 <body>
 
-<header>
-    <h1>Majnu Dealing</h1>
-    <p>Premium Wireless Earbuds Collection</p>
-</header>
-
-<section class="hero">
-    <img src="https://drive.google.com/file/d/1DwbrGNPwMdiXOYHKFX2f4Pxmc_euPznL/view?usp=drivesdk" alt="Earbuds">
-    <br>
-    <a class="btn" href="https://wa.me/923266102635">Order Now</a>
-</section>
-
-<section class="gallery">
-    <h2>Product Gallery</h2>
-
-    <div class="gallery-container">
-        <img src="https://drive.google.com/file/d/1DwbrGNPwMdiXOYHKFX2f4Pxmc_euPznL/view?usp=drivesdk" alt="Earbuds">
-        <img src="https://kommodo.ai/i/Vk6NXa7f4gmOV5Cy6opb" alt="Earbuds">
-        <img src="https://kommodo.ai/i/xEZ3DRI1ifW78fOa3Mru" alt="Earbuds">
-        <img src="https://kommodo.ai/i/WQ6UTP6F8w7yuDY54e0J" alt="Earbuds">
-    </div>
-</section>
-
-<section class="features">
-    <h2>Why Choose Our Earbuds?</h2>
-
-    <div class="feature-box">
-
-        <div class="card">
-            <h3>HD Sound</h3>
-            <p>Crystal clear audio quality.</p>
+    <!-- Header Navigation -->
+    <header>
+        <div class="nav-container">
+            <div class="logo" contenteditable="true">Apex Surgical</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#instruments">Instruments</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
+    </header>
 
-        <div class="card">
-            <h3>Long Battery</h3>
-            <p>Up to 30 hours playback.</p>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <span class="edit-notice">💡 نوٹ: آپ اس پیج پر موجود کسی بھی ٹیکسٹ یا نام پر ڈبل کلک کر کے اسے یہیں ایڈٹ کر سکتے ہیں!</span>
+            <h1 contenteditable="true">Premium Surgical Instruments</h1>
+            <p contenteditable="true">We manufacture and supply world-class, medical-grade surgical, dental, and veterinary instruments designed for extreme precision and durability.</p>
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Fast Charging</h3>
-            <p>Quick charge support.</p>
+    <!-- Instruments Section (Long Grid) -->
+    <section class="container" id="instruments">
+        <h2 class="section-title" contenteditable="true">Our Featured Instruments</h2>
+        <p class="section-subtitle" contenteditable="true">Explore our range of highly crafted stainless steel surgical tools. Click on any name or description to edit.</p>
+        
+        <div class="instruments-grid">
+            
+            <!-- Instrument 1: Scalpel -->
+            <div class="instrument-card">
+                <div class="instrument-img-container">
+                    <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e905d?auto=format&fit=crop&q=80&w=600" alt="Scalpel" class="instrument-img">
+                </div>
+                <div class="instrument-info">
+                    <span class="instrument-cat" contenteditable="true">Cutting Tools</span>
+                    <h3 contenteditable="true">Surgical Scalpel Handle No. 3</h3>
+                    <p contenteditable="true">High-grade stainless steel scalpel handle compatible with standard surgical blades for precise incisions.</p>
+                </div>
+            </div>
+
+            <!-- Instrument 2: Forceps -->
+            <div class="instrument-card">
+                <div class="instrument-img-container">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600" alt="Forceps" class="instrument-img">
+                </div>
+                <div class="instrument-info">
+                    <span class="instrument-cat" contenteditable="true">Holding Tools</span>
+                    <h3 contenteditable="true">Artery Forceps (Halsted Mosquito)</h3>
+                    <p contenteditable="true">Fine-tipped forceps designed for clamping small blood vessels to control bleeding during surgery.</p>
+                </div>
+            </div>
+
+            <!-- Instrument 3: Scissors -->
+            <div class="instrument-card">
+                <div class="instrument-img-container">
+                    <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=600" alt="Scissors" class="instrument-img">
+                </div>
+                <div class="instrument-info">
+                    <span class="instrument-cat" contenteditable="true">Dissecting Tools</span>
+                    <h3 contenteditable="true">Mayo Dissecting Scissors</h3>
+                    <p contenteditable="true">Featuring beveled blades for cutting tough body tissues, available in both straight and curved variants.</p>
+                </div>
+            </div>
+
+            <!-- Instrument 4: Retractors -->
+            <div class="instrument-card">
+                <div class="instrument-img-container">
+                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600" alt="Retractor" class="instrument-img">
+                </div>
+                <div class="instrument-info">
+                    <span class="instrument-cat" contenteditable="true">Retracting Tools</span>
+                    <h3 contenteditable="true">Senn Miller Retractor</h3>
+                    <p contenteditable="true">Double-ended retractor primarily used to hold back tissue or edges of incisions during skin surgeries.</p>
+                </div>
+            </div>
+
+            <!-- Instrument 5: Needle Holder -->
+            <div class="instrument-card">
+                <div class="instrument-img-container">
+                    <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=600" alt="Needle Holder" class="instrument-img">
+                </div>
+                <div class="instrument-info">
+                    <span class="instrument-cat" contenteditable="true">Suturing Tools</span>
+                    <h3 contenteditable="true">Mayo-Hegar Needle Holder</h3>
+                    <p contenteditable="true">Designed with cross-hatched jaws to firmly grip surgical needles for stable suturing.</p>
+                </div>
+            </div>
+
+            <!-- Instrument 6: Tweezers -->
+            <div class="instrument-card">
+                <div class="instrument-img-container">
+                    <img src="https://images.unsplash.com/photo-1606201452444-4874c32174d5?auto=format&fit=crop&q=80&w=600" alt="Tweezers" class="instrument-img">
+                </div>
+                <div class="instrument-info">
+                    <span class="instrument-cat" contenteditable="true">Dental Tools</span>
+                    <h3 contenteditable="true">Adson Tissue Tweezers</h3>
+                    <p contenteditable="true">Used to hold and manipulate delicate tissues during complex reconstructive surgical procedures.</p>
+                </div>
+            </div>
+
         </div>
+    </section>
 
-        <div class="card">
-            <h3>Bluetooth 5.3</h3>
-            <p>Stable and fast connection.</p>
+    <!-- Features Section (Adds length and premium feel) -->
+    <section class="features-section" id="about">
+        <h2 class="section-title" contenteditable="true">Why Choose Our Instruments?</h2>
+        <p class="section-subtitle" contenteditable="true">We combine traditional craftsmanship with advanced technology.</p>
+        
+        <div class="features-grid">
+            <div class="feature-box">
+                <div class="feature-icon">🛡️</div>
+                <h3 contenteditable="true">Medical Grade Steel</h3>
+                <p contenteditable="true">We use German & Japanese standard stainless steel, highly resistant to corrosion.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🔬</div>
+                <h3 contenteditable="true">Uncompromised Precision</h3>
+                <p contenteditable="true">Every single tool undergoes strict quality tests under microscopes before dispatch.</p>
+            </div>
+            <div class="feature-box">
+                <div class="feature-icon">🌍</div>
+                <h3 contenteditable="true">Global Export</h3>
+                <p contenteditable="true">Trusted by professional clinics and hospitals worldwide, originating from Sialkot.</p>
+            </div>
         </div>
+    </section>
 
-    </div>
-</section>
+    <!-- Contact Section -->
+    <section class="contact-section" id="contact">
+        <h2 class="section-title" contenteditable="true">Contact Us</h2>
+        <p class="section-subtitle" contenteditable="true">Feel free to reach out to us for orders, inquiries, or customized requirements.</p>
+        
+        <div class="contact-card-container">
+            <div class="contact-info-item">
+                <strong contenteditable="true">WhatsApp / Call:</strong><br>
+                <a href="https://wa.me/923266102635" target="_blank">03266102635</a>
+            </div>
+            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 20px 0;">
+            <div class="contact-info-item">
+                <strong contenteditable="true">Email Address:</strong><br>
+                <a href="mailto:meharrajab36@gmail.com">meharrajab36@gmail.com</a>
+            </div>
+        </div>
+    </section>
 
-<section class="contact">
-    <h2>Contact Us</h2>
-
-    <p>WhatsApp:</p>
-    <a href="https://wa.me/923266102635">
-        03266102635
-    </a>
-
-    <br><br>
-
-    <p>Email:</p>
-    <a href="mailto:majnudealing@gmail.com">
-        majnudealing@gmail.com
-    </a>
-</section>
-
-<footer>
-    © 2026 Majnu Dealing. All Rights Reserved.
-</footer>
+    <!-- Footer -->
+    <footer>
+        <p contenteditable="true">© 2026 Apex Surgical Instruments. Made in Sialkot, Pakistan. All Rights Reserved.</p>
+        <p style="margin-top: 10px; font-size: 11px; opacity: 0.5;">Double-click any text on this page to edit it instantly.</p>
+    </footer>
 
 </body>
-</html>
+    </html>
+    
