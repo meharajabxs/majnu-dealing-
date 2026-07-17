@@ -1,58 +1,37 @@
 <!DOCTYPE html>
-<html lang="ur" dir="ltr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Apex Surgical Instruments | Sialkot</title>
-    <!-- Google Fonts for professional typography -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;600;700&display=swap" rel="stylesheet">
-    
+    <title>Apex Surgical Instruments | Premium Export Quality Sialkot</title>
     <style>
-        /* CSS resets and base styles */
+        /* Global Styles & Reset */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
 
         :root {
-            --primary-color: #0d6efd;
-            --secondary-color: #0b5ed7;
-            --dark-color: #1e293b;
-            --light-bg: #f8fafc;
-            --border-color: #e2e8f0;
+            --primary-color: #0d3b66;
+            --secondary-color: #00b4d8;
+            --accent-color: #0077b6;
+            --text-dark: #1d3557;
+            --text-light: #457b9d;
+            --bg-light: #f8f9fa;
         }
 
         body {
-            background-color: var(--light-bg);
-            color: var(--dark-color);
+            color: var(--text-dark);
             line-height: 1.6;
+            background-color: #ffffff;
         }
 
-        /* Direct Edit Indicator Style */
-        [contenteditable="true"] {
-            border: 1px dashed transparent;
-            transition: all 0.3s ease;
-            outline: none;
-        }
-
-        [contenteditable="true"]:hover {
-            border-color: var(--primary-color);
-            background-color: rgba(13, 110, 253, 0.05);
-            cursor: pointer;
-        }
-
-        [contenteditable="true"]:focus {
-            border-color: var(--secondary-color);
-            background-color: rgba(13, 110, 253, 0.1);
-            box-shadow: 0 0 8px rgba(13, 110, 253, 0.2);
-        }
-
-        /* Navigation */
+        /* Header & Navigation */
         header {
             background-color: #ffffff;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -61,395 +40,431 @@
         .nav-container {
             max-width: 1200px;
             margin: 0 auto;
+            padding: 15px 20px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
         }
 
         .logo {
             font-size: 24px;
             font-weight: 700;
             color: var(--primary-color);
+            text-transform: uppercase;
+            letter-spacing: 1px;
         }
 
-        .nav-links {
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
             display: flex;
             list-style: none;
-            gap: 25px;
         }
 
-        .nav-links a {
+        nav ul li {
+            margin-left: 25px;
+        }
+
+        nav ul li a {
             text-decoration: none;
-            color: var(--dark-color);
+            color: var(--text-dark);
             font-weight: 600;
             transition: color 0.3s;
         }
 
-        .nav-links a:hover {
-            color: var(--primary-color);
+        nav ul li a:hover {
+            color: var(--secondary-color);
         }
 
         /* Hero Section */
         .hero {
-            background: linear-gradient(135deg, rgba(13, 110, 253, 0.05) 0%, rgba(13, 110, 253, 0.15) 100%);
-            padding: 100px 20px;
-            text-align: center;
-        }
-
-        .hero-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .hero h1 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            color: var(--dark-color);
-        }
-
-        .hero p {
-            font-size: 18px;
-            color: #64748b;
-            margin-bottom: 30px;
-        }
-
-        /* Help Notice */
-        .edit-notice {
-            background-color: #e0f2fe;
-            color: #0369a1;
-            padding: 12px;
-            border-radius: 8px;
-            display: inline-block;
-            margin-bottom: 20px;
-            font-size: 14px;
-            font-weight: 600;
-        }
-
-        /* Section Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 80px 20px;
-        }
-
-        .section-title {
-            text-align: center;
-            font-size: 36px;
-            margin-bottom: 15px;
-            position: relative;
-        }
-
-        .section-title::after {
-            content: '';
-            display: block;
-            width: 80px;
-            height: 4px;
-            background-color: var(--primary-color);
-            margin: 15px auto 0;
-            border-radius: 2px;
-        }
-
-        .section-subtitle {
-            text-align: center;
-            color: #64748b;
-            margin-bottom: 50px;
-        }
-
-        /* Grid Layout for Instruments */
-        .instruments-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-        }
-
-        .instrument-card {
-            background: #ffffff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            transition: transform 0.3s, box-shadow 0.3s;
-            border: 1px solid var(--border-color);
-        }
-
-        .instrument-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-        }
-
-        .instrument-img-container {
-            width: 100%;
-            height: 250px;
-            background-color: #f1f5f9;
+            background: linear-gradient(rgba(13, 59, 102, 0.88), rgba(29, 53, 87, 0.88)), 
+                        url('https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
-            overflow: hidden;
-        }
-
-        .instrument-img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        .instrument-info {
-            padding: 25px;
-        }
-
-        .instrument-info h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-            color: var(--dark-color);
-        }
-
-        .instrument-info p {
-            color: #64748b;
-            font-size: 14px;
-            margin-bottom: 15px;
-        }
-
-        .instrument-cat {
-            display: inline-block;
-            background: #f1f5f9;
-            color: var(--primary-color);
-            padding: 4px 10px;
-            border-radius: 20px;
-            font-size: 12px;
-            font-weight: 600;
-        }
-
-        /* Features Section */
-        .features-section {
-            background-color: #ffffff;
-            padding: 80px 0;
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 40px;
-            max-width: 1200px;
-            margin: 0 auto;
+            text-align: center;
+            color: #ffffff;
             padding: 0 20px;
         }
 
-        .feature-box {
-            text-align: center;
-        }
-
-        .feature-icon {
-            font-size: 40px;
-            color: var(--primary-color);
+        .hero-content h1 {
+            font-size: 48px;
             margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
         }
 
-        .feature-box h3 {
-            margin-bottom: 10px;
+        .hero-content p {
+            font-size: 20px;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            color: #e0f2fe;
         }
 
-        /* Contact Section */
-        .contact-section {
-            background-color: #f8fafc;
-            padding: 80px 20px;
-        }
-
-        .contact-card-container {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: #ffffff;
-            padding: 40px;
-            border-radius: 12px;
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
-            border: 1px solid var(--border-color);
-            text-align: center;
-        }
-
-        .contact-info-item {
-            margin: 20px 0;
-            font-size: 18px;
-        }
-
-        .contact-info-item a {
-            color: var(--primary-color);
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
             text-decoration: none;
-            font-weight: 600;
-            transition: color 0.3s;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+            text-transform: uppercase;
         }
 
-        .contact-info-item a:hover {
-            color: var(--secondary-color);
-            text-decoration: underline;
+        .btn:hover {
+            background-color: var(--accent-color);
         }
 
-        /* Footer */
-        footer {
-            background-color: var(--dark-color);
-            color: #ffffff;
-            padding: 50px 20px;
+        /* Info Section */
+        .intro-text {
             text-align: center;
+            max-width: 800px;
+            margin: 60px auto 20px auto;
+            padding: 0 20px;
         }
 
-        footer p {
-            opacity: 0.8;
+        .intro-text h2 {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        /* Products Section */
+        .products-section {
+            max-width: 1200px;
+            margin: 40px auto 80px auto;
+            padding: 0 20px;
+        }
+
+        .category-title {
+            font-size: 24px;
+            color: var(--primary-color);
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+            margin: 40px 0 20px 0;
+            text-transform: uppercase;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #e2e8f0;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+
+        .product-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            background-color: #f1f5f9;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-tag {
+            font-size: 12px;
+            text-transform: uppercase;
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .product-name {
+            font-size: 18px;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .product-desc {
+            font-size: 13px;
+            color: #64748b;
+        }
+
+        /* Contact & Footer Section */
+        footer {
+            background-color: var(--primary-color);
+            color: #ffffff;
+            padding: 60px 20px 20px 20px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 40px;
+        }
+
+        .footer-about h3, .footer-contact h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .footer-about h3::after, .footer-contact h3::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin-top: 8px;
+        }
+
+        .footer-about p {
+            color: #94a3b8;
+            font-size: 15px;
+        }
+
+        .contact-link {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 12px 25px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            margin-top: 15px;
+            transition: background 0.3s;
+        }
+
+        .contact-link:hover {
+            background: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            color: #94a3b8;
             font-size: 14px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero-content h1 { font-size: 32px; }
+            .hero-content p { font-size: 16px; }
+            .nav-container { flex-direction: column; text-align: center; }
+            nav ul { margin-top: 15px; }
+            nav ul li { margin: 0 10px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Header & Navigation -->
     <header>
         <div class="nav-container">
-            <div class="logo" contenteditable="true">Apex Surgical</div>
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#instruments">Instruments</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
+            <div class="logo">APEX<span>SURGICAL</span></div>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
-            <span class="edit-notice">💡 نوٹ: آپ اس پیج پر موجود کسی بھی ٹیکسٹ یا نام پر ڈبل کلک کر کے اسے یہیں ایڈٹ کر سکتے ہیں!</span>
-            <h1 contenteditable="true">Premium Surgical Instruments</h1>
-            <p contenteditable="true">We manufacture and supply world-class, medical-grade surgical, dental, and veterinary instruments designed for extreme precision and durability.</p>
+            <h1>Premium Surgical & Dental Instruments</h1>
+            <p>Direct from Sialkot's finest manufacturing hub. We supply high-grade, reusable stainless steel instruments to medical professionals worldwide.</p>
+            <a href="#products" class="btn">Explore Instruments</a>
         </div>
     </section>
 
-    <!-- Instruments Section (Long Grid) -->
-    <section class="container" id="instruments">
-        <h2 class="section-title" contenteditable="true">Our Featured Instruments</h2>
-        <p class="section-subtitle" contenteditable="true">Explore our range of highly crafted stainless steel surgical tools. Click on any name or description to edit.</p>
+    <!-- Intro Text -->
+    <div class="intro-text">
+        <h2>Our Manufacturing Excellence</h2>
+        <p>Crafted with precision using medical-grade German stainless steel. Our Sialkot facility ensures every single instrument passes rigorous quality checks before shipment.</p>
+    </div>
+
+    <!-- Products Section -->
+    <section class="products-section" id="products">
         
-        <div class="instruments-grid">
-            
-            <!-- Instrument 1: Scalpel -->
-            <div class="instrument-card">
-                <div class="instrument-img-container">
-                    <img src="https://images.unsplash.com/photo-1579684389782-64d84b5e905d?auto=format&fit=crop&q=80&w=600" alt="Scalpel" class="instrument-img">
-                </div>
-                <div class="instrument-info">
-                    <span class="instrument-cat" contenteditable="true">Cutting Tools</span>
-                    <h3 contenteditable="true">Surgical Scalpel Handle No. 3</h3>
-                    <p contenteditable="true">High-grade stainless steel scalpel handle compatible with standard surgical blades for precise incisions.</p>
+        <!-- CATEGORY 1: GENERAL SURGICAL INSTRUMENTS -->
+        <div class="category-title">General Surgical Instruments</div>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&w=400&q=80" alt="Mayo Scissors" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Surgical Scissors</span>
+                    <div class="product-name">Standard Mayo Scissors Straight</div>
+                    <div class="product-desc">Highly polished finish for aesthetic and corrosion resistance. Available in multiple sizes.</div>
                 </div>
             </div>
-
-            <!-- Instrument 2: Forceps -->
-            <div class="instrument-card">
-                <div class="instrument-img-container">
-                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=600" alt="Forceps" class="instrument-img">
-                </div>
-                <div class="instrument-info">
-                    <span class="instrument-cat" contenteditable="true">Holding Tools</span>
-                    <h3 contenteditable="true">Artery Forceps (Halsted Mosquito)</h3>
-                    <p contenteditable="true">Fine-tipped forceps designed for clamping small blood vessels to control bleeding during surgery.</p>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=400&q=80" alt="Hemostatic Forceps" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Forceps</span>
+                    <div class="product-name">Halsted Mosquito Forceps</div>
+                    <div class="product-desc">Designed with fine tips and secure interlocking teeth for precise clamping.</div>
                 </div>
             </div>
-
-            <!-- Instrument 3: Scissors -->
-            <div class="instrument-card">
-                <div class="instrument-img-container">
-                    <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&q=80&w=600" alt="Scissors" class="instrument-img">
-                </div>
-                <div class="instrument-info">
-                    <span class="instrument-cat" contenteditable="true">Dissecting Tools</span>
-                    <h3 contenteditable="true">Mayo Dissecting Scissors</h3>
-                    <p contenteditable="true">Featuring beveled blades for cutting tough body tissues, available in both straight and curved variants.</p>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1581594693702-fbdc51b2763b?auto=format&fit=crop&w=400&q=80" alt="Scalpel Handle" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Surgical Handles</span>
+                    <div class="product-name">Scalpel Handle No. 3 & No. 4</div>
+                    <div class="product-desc">Ergonomic grip handles made for standard surgical blades, perfect for smooth incisional control.</div>
                 </div>
             </div>
-
-            <!-- Instrument 4: Retractors -->
-            <div class="instrument-card">
-                <div class="instrument-img-container">
-                    <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&q=80&w=600" alt="Retractor" class="instrument-img">
-                </div>
-                <div class="instrument-info">
-                    <span class="instrument-cat" contenteditable="true">Retracting Tools</span>
-                    <h3 contenteditable="true">Senn Miller Retractor</h3>
-                    <p contenteditable="true">Double-ended retractor primarily used to hold back tissue or edges of incisions during skin surgeries.</p>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=400&q=80" alt="Tissue Forceps" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Forceps</span>
+                    <div class="product-name">Adson Tissue Forceps 1x2 Teeth</div>
+                    <div class="product-desc">Ideal for holding delicate tissues securely without slipping during micro surgeries.</div>
                 </div>
             </div>
-
-            <!-- Instrument 5: Needle Holder -->
-            <div class="instrument-card">
-                <div class="instrument-img-container">
-                    <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=600" alt="Needle Holder" class="instrument-img">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&q=80" alt="Needle Holder" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Suturing</span>
+                    <div class="product-name">Mayo-Hegar Needle Holder</div>
+                    <div class="product-desc">Cross-grooved jaws provide a tight grip on various suturing needles.</div>
                 </div>
-                <div class="instrument-info">
-                    <span class="instrument-cat" contenteditable="true">Suturing Tools</span>
-                    <h3 contenteditable="true">Mayo-Hegar Needle Holder</h3>
-                    <p contenteditable="true">Designed with cross-hatched jaws to firmly grip surgical needles for stable suturing.</p>
-                </div>
-            </div>
-
-            <!-- Instrument 6: Tweezers -->
-            <div class="instrument-card">
-                <div class="instrument-img-container">
-                    <img src="https://images.unsplash.com/photo-1606201452444-4874c32174d5?auto=format&fit=crop&q=80&w=600" alt="Tweezers" class="instrument-img">
-                </div>
-                <div class="instrument-info">
-                    <span class="instrument-cat" contenteditable="true">Dental Tools</span>
-                    <h3 contenteditable="true">Adson Tissue Tweezers</h3>
-                    <p contenteditable="true">Used to hold and manipulate delicate tissues during complex reconstructive surgical procedures.</p>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Features Section (Adds length and premium feel) -->
-    <section class="features-section" id="about">
-        <h2 class="section-title" contenteditable="true">Why Choose Our Instruments?</h2>
-        <p class="section-subtitle" contenteditable="true">We combine traditional craftsmanship with advanced technology.</p>
-        
-        <div class="features-grid">
-            <div class="feature-box">
-                <div class="feature-icon">🛡️</div>
-                <h3 contenteditable="true">Medical Grade Steel</h3>
-                <p contenteditable="true">We use German & Japanese standard stainless steel, highly resistant to corrosion.</p>
-            </div>
-            <div class="feature-box">
-                <div class="feature-icon">🔬</div>
-                <h3 contenteditable="true">Uncompromised Precision</h3>
-                <p contenteditable="true">Every single tool undergoes strict quality tests under microscopes before dispatch.</p>
-            </div>
-            <div class="feature-box">
-                <div class="feature-icon">🌍</div>
-                <h3 contenteditable="true">Global Export</h3>
-                <p contenteditable="true">Trusted by professional clinics and hospitals worldwide, originating from Sialkot.</p>
             </div>
         </div>
-    </section>
 
-    <!-- Contact Section -->
-    <section class="contact-section" id="contact">
-        <h2 class="section-title" contenteditable="true">Contact Us</h2>
-        <p class="section-subtitle" contenteditable="true">Feel free to reach out to us for orders, inquiries, or customized requirements.</p>
-        
-        <div class="contact-card-container">
-            <div class="contact-info-item">
-                <strong contenteditable="true">WhatsApp / Call:</strong><br>
-                <a href="https://wa.me/923266102635" target="_blank">03266102635</a>
+        <!-- CATEGORY 2: DENTAL INSTRUMENTS -->
+        <div class="category-title">Professional Dental Tools</div>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?auto=format&fit=crop&w=400&q=80" alt="Dental Scaler" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Dental</span>
+                    <div class="product-name">Sickle Scaler H6/H7</div>
+                    <div class="product-desc">Precision double-ended scaler engineered for superior plaque and tartar removal.</div>
+                </div>
             </div>
-            <hr style="border: 0; border-top: 1px solid var(--border-color); margin: 20px 0;">
-            <div class="contact-info-item">
-                <strong contenteditable="true">Email Address:</strong><br>
-                <a href="mailto:meharrajab36@gmail.com">meharrajab36@gmail.com</a>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&w=400&q=80" alt="Dental Extracting Forceps" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Extraction</span>
+                    <div class="product-name">Upper Molars Extracting Forceps</div>
+                    <div class="product-desc">Heavy-duty construction providing maximum leverage for safe clinical dental extractions.</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1512223792601-592a9809eed4?auto=format&fit=crop&w=400&q=80" alt="Dental Mirror" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Diagnostics</span>
+                    <div class="product-name">Dental Front Surface Mirror</div>
+                    <div class="product-desc">Rhodiated anti-fog glass coating providing clear indirect vision for oral inspection.</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=400&q=80" alt="Dental Probe" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Dental</span>
+                    <div class="product-name">Explorers & Periodontal Probes</div>
+                    <div class="product-desc">Finely calibrated markings for highly accurate pocket depth assessments.</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=400&q=80" alt="Dental Elevator" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Extraction</span>
+                    <div class="product-name">Luxating Dental Elevator</div>
+                    <div class="product-desc">Ergonomic handle ensures minimum trauma during root separation processes.</div>
+                </div>
             </div>
         </div>
+
+        <!-- CATEGORY 3: MANICURE & BEAUTY TOOLS -->
+        <div class="category-title">Manicure & Beauty Implements</div>
+        <div class="products-grid">
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1604654894610-df490651e56c?auto=format&fit=crop&w=400&q=80" alt="Cuticle Nipper" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Manicure</span>
+                    <div class="product-name">Professional Cuticle Nipper</div>
+                    <div class="product-desc">Ultra-sharp jaw alignment for flawless and clean dead skin clipping.</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=400&q=80" alt="Tweezers" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Beauty Tools</span>
+                    <div class="product-name">Slanted Eyebrow Tweezers</div>
+                    <div class="product-desc">Perfectly calibrated tension for removing the finest hairs from the roots.</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1610992015732-2449b0de0a86?auto=format&fit=crop&w=400&q=80" alt="Nail Cutter" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Manicure</span>
+                    <div class="product-name">Heavy Duty Toenail Clipper</div>
+                    <div class="product-desc">Designed with curved cutting edges for thick or ingrown fingernails.</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1519014816548-bf5fe059798b?auto=format&fit=crop&w=400&q=80" alt="Nail Pusher" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Manicure</span>
+                    <div class="product-name">Dual-Ended Nail Scraper Pusher</div>
+                    <div class="product-desc">Non-slip grip body ideal for cleaning natural nails and salon prep work.</div>
+                </div>
+            </div>
+            <div class="product-card">
+                <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=400&q=80" alt="Barber Scissors" class="product-img">
+                <div class="product-info">
+                    <span class="product-tag">Beauty Tools</span>
+                    <div class="product-name">Professional Hair Thinning Shears</div>
+                    <div class="product-desc">Razor sharp hollow-ground steel blades for seamless hair texturizing.</div>
+                </div>
+            </div>
+        </div>
+
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p contenteditable="true">© 2026 Apex Surgical Instruments. Made in Sialkot, Pakistan. All Rights Reserved.</p>
-        <p style="margin-top: 10px; font-size: 11px; opacity: 0.5;">Double-click any text on this page to edit it instantly.</p>
+    <!-- Footer & Contact Section -->
+    <footer id="contact">
+        <div class="footer-container">
+            <div class="footer-about">
+                <h3>Apex Surgical Instruments</h3>
+                <p>We are direct manufacturers and exporters of premium medical, dental, and beauty instruments based in Sialkot, Pakistan. Delivering global standards at competitive factory rates.</p>
+            </div>
+            <div class="footer-contact">
+                <h3>Bulk Wholesale Orders</h3>
+                <p>For custom manufacturing, catalog requests, or wholesale price quotes, reach out directly via WhatsApp or Phone call:</p>
+                <a href="tel:+923266102635" class="contact-link">Call / WhatsApp: +92 3266102535</a>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2026 Apex Surgical Instruments. All Rights Reserved. Manufactured in Sialkot, Pakistan.
+        </div>
     </footer>
 
 </body>
     </html>
-    
+                
